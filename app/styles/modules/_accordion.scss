@@ -1,0 +1,66 @@
+/*** Modul : Akkordeon ***/
+
+.accordion {
+  border-bottom: 1px solid $gray-border;
+  margin: 0 0 $spacer-x * 8 0;
+}
+
+.accordion .accordion_head, .accordion .collpase-all {
+  margin: 0px 0;
+  padding: $spacer-x * 2 0px;
+  display: block;
+}
+
+.accordion .accordion_head.h5, .accordion .collpase-all.h5 {
+  margin: 0px 0;
+  padding: $spacer-x * 4 0 $spacer-x * 4 0;
+  border-top: 1px solid $gray-border;
+}
+
+.accordion_head.h5.closed:before, .accordion_head.h5.open:before, .accordion .show-all:before, .accordion .hide-all:before {
+  margin-top: -8px;
+}
+
+.accordion_head.h5 + .accordion_content {
+  display:block;
+  padding-left: 30px;
+  padding-bottom: $spacer-x * 2;
+  margin-top: -10px;
+}
+.accordion .accordion_content {
+  margin: 0;
+  padding: $spacer-x * 2 0px;
+}
+
+.accordion.closed .accordion_content {
+  display: none;
+}
+
+.accordion .accordion_head.closed:before, .accordion .show-all:before {
+  content: $icon-Ausklappen_v1-2;
+
+}
+
+.accordion .accordion_head.open:before, .accordion .hide-all:before {
+  content: $icon-Einklappen_v1-2;
+}
+
+.accordion_head.closed:before, .accordion_head.open:before, .accordion .hide-all:before, .accordion .show-all:before {
+  @extend %icon-settings;
+  float: left;
+  margin-right: 0px;
+  top: 6px;
+  font-size: 1.2rem;
+  position: relative;
+  width: $spacer-x * 6;
+  height: $spacer-x * 6;
+  color: $brand-primary;
+}
+
+.accordion .accordion_head {
+  display: block;
+}
+
+.accordion .accordion_head:hover, .accordion .collpase-all:hover {
+  cursor: pointer;
+}

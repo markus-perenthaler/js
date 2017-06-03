@@ -1,0 +1,343 @@
+.video-container,
+.audio-container {
+  position: relative;
+
+  .embed-responsive {
+    //16:9
+    padding-bottom: (9 / 16 * 100%);
+  }
+
+  &.four-by-three {
+    .embed-responsive {
+      background: $gray;
+      padding-bottom: (3 / 4 * 100%);
+    }
+  }
+
+  &.three-by-four {
+    .embed-responsive {
+      background: $gray;
+      padding-bottom: (4 / 3 * 100%);
+    }
+  }
+  [class*=" icon-"],
+  [class^="icon-"] {
+    &.icon-play-overlay {
+      &:before {
+        text-shadow: 0 0 4px rgba(black, .3);
+        font-size: $font-size-h1 * 2.5;
+
+        @include media-breakpoint-down(md) {
+          font-size: $font-size-h1 * 1.5;
+        }
+        @include media-breakpoint-down(xs) {
+          font-size: $font-size-h1;
+        }
+      }
+    }
+  }
+
+  .controls-container {
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.6) 0%, rgba(255, 255, 255, 0) 100%);
+    padding: 0 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    z-index: 2;
+    .link[class^="icon-"], .link[class*=" icon-"] {
+      padding-left: 0;
+      //line-height: 1;
+      &:before {
+        top: 0;
+        position: relative;
+      }
+    }
+  }
+
+  .progress,
+  .volume-level {
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  // basic styles for video controls
+  .video-controls,
+  .audio-controls {
+    margin-bottom: 0;
+    padding: 0 10px;
+    width: 100%;
+    display: table;
+    height: 40px;
+    max-height: 40px;
+    > div {
+      width: 40px;
+      display: table-cell;
+      vertical-align: middle;
+      &.timer {
+        width: auto;
+      }
+    }
+  }
+
+  .timer {
+    padding-left: 20px;
+    font-size: $small-font-size;
+    color: white;
+    line-height: 1;
+    .total-time,
+    .spent-time {
+      display: inline-block;
+      span + span:before {
+        content: ':';
+      }
+    }
+  }
+
+  [class*=" icon-"],
+  [class^="icon-"] {
+    &.play:before {
+      color: #fff;
+    }
+  }
+
+  .volume-controls {
+    position: relative;
+    overflow: hidden;
+    padding-left: 10px;
+    max-width: 40px;
+    text-align: left;
+    transition: all 0.8s ease-in-out;
+
+    &:hover {
+      width: 120px;
+      max-width: 200px;
+    }
+
+    .icon-volume-high {
+      cursor: pointer;
+      &:before {
+        //font-size: 16px;
+      }
+    }
+
+    .volume-level-container {
+      position: absolute;
+      margin-left: 30px;
+      margin-right: 0;
+      cursor: pointer;
+      width: 80px;
+
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  .icon-fullscreen {
+    &:before {
+      //font-size: 20px;
+    }
+    .no-fullscreen &,
+    .no-webgl & {
+      display: none;
+    }
+  }
+
+  &.state_ended {
+    .play-overlay:before {
+      content: $icon-Aktualisieren_v1-2;
+    }
+  }
+
+  &.state_muted {
+    .volume-state:before {
+      content: $icon-Ton_mute_v1-2;
+    }
+
+  }
+
+  &.state_volume_low {
+    .volume-state:before {
+      content: $icon-Ton_low_v1-2;
+    }
+  }
+
+  &.state_playing {
+    .play:before {
+      content: $icon-Pause_v1-2;
+    }
+
+    .play-overlay:before {
+      content: '';
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .video-controls,
+    .audio-controls {
+      height: 30px;
+      padding: 0;
+      > div {
+        width: 35px;
+        &.timer {
+          width: auto;
+          padding-left: 10px;
+        }
+        &.volume-controls {
+          width: 25px;
+          padding-left: 0;
+          max-width: 25px;
+
+          &:hover {
+            width: 100px;
+            max-width: 180px;
+          }
+        }
+      }
+    }
+
+    .volume-controls .volume-level-container {
+      width: 60px;
+    }
+
+    .play,
+    .icon-fullscreen {
+      &:before {
+        //font-size: 18px;
+      }
+    }
+    .icon-volume-high {
+      cursor: pointer;
+      &:before {
+        //font-size: 14px;
+      }
+    }
+  }
+
+  &.half,
+  .marginal-column & {
+    .video-controls,
+    .audio-controls {
+      height: 30px;
+      padding: 0;
+      > div {
+        width: 35px;
+        &.timer {
+          width: auto;
+          padding-left: 10px;
+        }
+        &.volume-controls {
+          width: 25px;
+          padding-left: 0;
+          max-width: 25px;
+
+          &:hover {
+            width: 100px;
+            max-width: 180px;
+          }
+        }
+      }
+    }
+
+    .volume-controls .volume-level-container {
+      width: 60px;
+    }
+
+    .icon-volume-high {
+      cursor: pointer;
+    }
+  }
+
+}
+
+.audio-container {
+  background: $gray-lightest;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  .controls-container {
+    position: relative;
+    background: $gray-lightest;
+    padding: 20px 15px 10px 15px;
+  }
+  [class*=" icon-"],
+  [class^="icon-"] {
+    &.play, &.icon-volume-high {
+      &:before {
+        color: $gray-dark;
+      }
+    }
+  }
+  .timer {
+    color: $gray-dark;
+  }
+  .rangeslider__handle {
+    background-color: $white;
+  }
+  .description {
+    border-top: 2px solid white;
+    display: block;
+    padding: 10px 15px;
+  }
+}
+
+.video-container {
+  &.state_playing {
+    .controls-container {
+      max-height: 0;
+      transition: max-height 0.5s;
+    }
+
+    &:hover .controls-container {
+      max-height: 50px;
+      transition: max-height 0.5s;
+    }
+
+  }
+
+  .touch & {
+
+    .controls-container {
+      max-height: 50px;
+    }
+    &.state_playing {
+      .controls-container {
+        max-height: 0;
+      }
+    }
+    &.state_touched .controls-container {
+      max-height: 50px;
+    }
+  }
+
+  &:fullscreen {
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    .embed-responsive {
+      transform: translateY(-50%);
+      top: 50%;
+    }
+  }
+
+  &.half:not(:fullscreen),
+  aside &:not(:fullscreen) {
+    .play-overlay {
+      font-size: $font-size-h1 * 1.5;
+      @include media-breakpoint-down(xs) {
+        font-size: $font-size-h1;
+      }
+    }
+  }
+
+  + p, + .btn {
+    margin-top: 10px;
+  }
+}
+
+.touch .video-container .volume-controls,
+.touch .audio-container .volume-controls {
+  display: none;
+}

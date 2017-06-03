@@ -1,0 +1,8 @@
+@font-face {
+    font-family: 'DBHeadBlack';
+    src: url('dbhead-black.eot');
+    src: url('dbhead-black.eot') format('embedded-opentype'),
+         url('dbhead-black.woff') format('woff'),
+         url('dbhead-black.ttf') format('truetype'),
+         url('dbhead-black.svg#DBHeadBlack') format('svg');
+}

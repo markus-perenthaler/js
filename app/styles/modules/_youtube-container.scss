@@ -1,0 +1,12 @@
+.youttube-container {
+  .pull-right {
+    @include media-breakpoint-down(xs) {
+      // sonst drückt sich das Element nicht auf
+      width: 100%;
+    }
+  }
+
+  .embed-responsive {
+    @extend .embed-responsive-16by9;
+  }
+}

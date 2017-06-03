@@ -1,0 +1,17 @@
+//noinspection SassScssResolvedByNameOnly
+.functional-divider-header {
+  border-top: 4px solid $brand-primary;
+  margin-top: 40px;
+
+  + h2 {
+    margin-top: -5px;
+  }
+
+  &:first-child {
+    margin-top: 0;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

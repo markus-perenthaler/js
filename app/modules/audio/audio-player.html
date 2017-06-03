@@ -1,0 +1,38 @@
+<div class="editorial-content ">
+
+  <!-- add class half right / half left to "audio-container" to float audio item accordingly -->
+  <div class="audio-container js_audio-container spacer-xs" itemscope itemtype="http://schema.org/AudioObject">
+    <meta itemprop="encodingFormat" content="mp3" />
+    <audio src="dummy-content/will_full.mp3" ></audio>
+    <div class="controls-container">
+      <!-- progress bar -->
+      <div class="progress">
+        <div class="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+          <span class="sr-only" data-text="Complete"></span>
+        </div>
+      </div>
+      <div class="audio-controls">
+        <div>
+          <!-- toggle play / pause-->
+          <a href="#" class="link play icon-play js_play"></a>
+        </div>
+        <div class="volume-controls">
+          <!-- volume-icon -->
+          <div href="#" class="link icon-volume-high js_volume volume-state"></div>
+          <div class="volume-level-container">
+            <input type="range" min="0" max="1" step="0.1" value="0" class="">
+          </div>
+        </div>
+        <div class="timer">
+          <div class="spent-time"><span class="minutes">00</span><span class="seconds">00</span></div> / <div class="total-time" itemprop="duration"><span class="minutes">00</span><span class="seconds">00</span></div>
+        </div>
+      </div>
+    </div>
+    <meta itemprop="contentUrl" content="url-to-audio-file" />
+		<span class="description">
+			<!-- duration content im Format P[n]Y[n]M[n]DT[n]H[n]M[n]S oder P[n]W (https://en.wikipedia.org/wiki/ISO_8601#Durations) -->
+			<meta itemprop="duration" content="T0M15S" />
+			<span itemprop="description">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci dignissimos enim illum praesentium quam!</span>
+		</span>
+  </div>
+</div>

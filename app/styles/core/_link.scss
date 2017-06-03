@@ -1,0 +1,299 @@
+//noinspection SassScssResolvedByNameOnly
+%icon-round-gray {
+  padding-left: 40px !important;
+  margin-bottom: 10px;
+
+  &:before {
+    font-size: 16px !important;
+    line-height: 30px;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: $gray-dark;
+    color: $gray-lighter !important;
+    top: -5px !important;
+  }
+}
+
+//noinspection SassScssResolvedByNameOnly
+.link {
+
+  position: relative;
+  transition: color .2s ease;
+  font-weight: normal;
+  color: $gray !important;
+  font-family: $font-family-sans-serif;
+
+  &:hover {
+    color: $brand-primary;
+  }
+
+  &[class^="icon-"], &[class*=" icon-"] {
+    padding-left: 22px;
+    color: $brand-primary;
+    display: inline-block;
+
+    .editorial-content & {
+      display: inline;
+    }
+
+    &:before {
+      @extend %icon-settings;
+      content: '';
+      right: auto;
+      color: $brand-primary;
+      position: absolute;
+      left: 0;
+      font-size: 20px;
+      /* fixes different absolute positioning of pseudo elements across browsers */
+      transform: translateY(0);
+    }
+
+    &:hover {
+      color: $gray-dark;
+    }
+
+    .btn & {
+      min-height: 5px;
+    }
+  }
+
+  &.icon-intern:before {
+    content: $icon-Weiter_v1-2;
+    left: 2px;
+  }
+  &.icon-mail:before {
+    content: $icon-Kontakt_E-Mail_v1-2;
+  }
+  &.icon-image:before {
+    content: $icon-Bilder_v1-2;
+    transform: none;
+  }
+  &.icon-video:before {
+    content: $icon-Video_v1-2;
+  }
+  &.icon-print:before {
+    content: $icon-Drucken_v1-2;
+  }
+  &.icon-document:before {
+    content: $icon-Dokument_v1-2;
+  }
+  &.icon-podcast:before {
+    content: $icon-Audio_v1-2;
+  }
+  &.icon-play:before {
+    content: $icon-Play_v1-2;
+  }
+  &.icon-replay:before {
+    content: $icon-Play_v1-2;
+  }
+  &.icon-folder:before {
+    content: $icon-Ordner_v1-2;
+  }
+  &.icon-trash:before {
+    content: $icon-Loeschen_v1-2;
+  }
+  &.icon-share:before {
+    content: $icon-Teilen_v1-2;
+  }
+  &.icon-calendar:before {
+    content: $icon-Kalender_v1-2;
+  }
+  //&.icon-rss:before {
+  //  content: $icon-rss;
+  //}
+  //&.icon-pdf:before {
+  //  content: $icon-file-pdf;
+  //}
+  //&.icon-advidser:before {
+  //    content: $icon-advidser;
+  //}
+  &.icon-search:before {
+    content: $icon-Suchen_v1-2;
+  }
+  &.icon-extern:before {
+    content: $icon-Externer_Link_v1-2;
+  }
+  &.icon-lightbox-open:before {
+    content: $icon-Vergroessern_v1-2;
+  }
+  &.icon-pause:before {
+    color: white;
+    content: $icon-Pause_v1-2;
+  }
+  &.icon-volume-high:before {
+    color: white;
+    content: $icon-Ton_v1-2;
+  }
+  &.icon-volume-low:before {
+    color: white;
+    content: $icon-Ton_low_v1-2;
+  }
+  &.icon-volume-mute:before {
+    color: white;
+    content: $icon-Ton_mute_v1-2;
+  }
+  &.icon-fullscreen:before {
+    color: white;
+    // content: $icon-fullscreen;
+  }
+  &.icon-play-overlay {
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    bottom: 30px;
+    left: 0;
+    right: 0;
+
+    &:hover {
+      cursor: pointer;
+    }
+    &:before {
+      content: $icon-Video_v1-2;
+      color: white;
+      transform: translate(-50%, -50%);
+      top: 50% !important;
+      display: block;
+      left: 50%;
+      bottom: auto;
+    }
+  }
+
+  &.icon-facebook {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      font-size: 20px;
+      content: $icon-Facebook_v1-2;
+    }
+  }
+  &.icon-youtube {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      // content: $icon-youtube;
+    }
+  }
+  &.icon-twitter {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      content: $icon-Twitter_v1-2;
+    }
+  }
+  &.icon-xing {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      content: $icon-Xing_v1-2;
+    }
+  }
+  &.icon-flickr {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      //content: $icon-flickr;
+    }
+  }
+  &.icon-instagram {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      //content: $icon-instagram;
+    }
+  }
+  &.icon-googleplus {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      content: $icon-Google-Plus_v1-2;
+    }
+  }
+  &.icon-linkedin {
+    @extend %icon-round-gray;
+    &:before {
+      color: white;
+      content: $icon-Linked-In_v1-2;
+    }
+  }
+  &.icon-deselect-all {
+    &:before {
+      //content: $icon-checkbox-deselect;
+    }
+  }
+  &.icon-bus {
+    &:before {
+      content: $icon-Bus_v1-2;
+    }
+  }
+  &.icon-truck {
+    &:before {
+      //content: $icon-truck;
+    }
+  }
+  &.icon-video-link {
+    &:before {
+      content: $icon-Play_v1-2;
+    }
+  }
+  &.icon-plus {
+    &:before {
+      content: $icon-Ausklappen_v1-2;
+      font-size: 14px;
+    }
+
+    &.state_open {
+      &:before {
+        content: $icon-Einklappen_v1-2;
+      }
+    }
+  }
+  &.icon-minus {
+    &:before {
+      content: $icon-Einklappen_v1-2;
+      font-size: 14px;
+    }
+  }
+  &.icon-map-cursor {
+    position: absolute;
+    top: 15px;
+    &:before {
+      left: 10px;
+      content: $icon-Position-bestimmen_v1-2;
+      color: $brand-primary;
+      font-size: 40px;
+    }
+  }
+
+  // styles for colored icons in social media box
+  &[class^="icon-social"], &[class*=" icon-social"] {
+    padding-left: 42px;
+    span:before, span:after,
+    &:before,
+    &:after {
+      @extend %icon-settings;
+      font-size: 30px;
+      display: block;
+      position: absolute;
+      top: 50% !important;
+      transform: translateY(-50%);
+    }
+    span:before,
+    span:after,
+    &:after {
+      left: 0;
+    }
+  }
+
+
+  &.unselect {
+    vertical-align: middle;
+    span {
+      position: relative;
+      top: 2px;
+      font-size: 18px;
+      color: $brand-primary;
+    }
+  }
+}

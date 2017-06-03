@@ -1,0 +1,43 @@
+<h3>Video Player</h3>
+<div class="video-container js_video-container hidden-print" itemscope itemtype="http://schema.org/VideoObject">
+	<div class="embed-responsive" itemprop="video">
+		<span class="link icon-play-overlay play-overlay"></span>
+		<video class="js_video"
+			   poster="/dummy-content/images/EC-VL-16_9_740x416.jpg"
+			   preload="none">
+			<source src="dummy-content/db-tv-spot_-_autonomes-fahren.mp4" type="video/mp4"/>
+			Videotag not supported.
+		</video>
+		<div class="controls-container">
+			<!-- progress bar -->
+			<div class="progress">
+				<div class="progress-bar" role="progressbar" aria-valuenow="0%" aria-valuemin="0%" aria-valuemax="100%">
+					<span class="sr-only" data-text="complete"></span>
+				</div>
+			</div>
+			<div class="video-controls js_video-controls">
+				<div>
+					<!-- toggle play / pause-->
+					<a href="#" class="link play icon-play js_play"></a>
+				</div>
+				<div class="volume-controls">
+					<!-- volume-icon -->
+					<div class="link icon-volume-high js_volume volume-state"></div>
+					<div class="volume-level-container">
+						<input type="range" min="0" max="1" step="0.1" value="0" class="">
+					</div>
+				</div>
+				<div class="timer">
+					<div class="spent-time"><span class="minutes">00</span><span class="seconds">00</span></div>
+					/
+					<div class="total-time" itemprop="duration">
+						<span class="minutes">00</span><span class="seconds">00</span></div>
+				</div>
+				<div>
+					<!-- full screen -->
+					<a href="#" class="link icon-fullscreen js_fullscreen pull-right"></a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

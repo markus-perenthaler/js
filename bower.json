@@ -1,0 +1,23 @@
+{
+  "name": "pitch2017",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.1",
+    "bootstrap": "v4.x",
+    "slick-carousel": "~1.6.0",
+    "rangeslider.js": "~2.3.0"
+  },
+  "overrides": {
+    "bootstrap-sass": {
+      "main": [
+        "assets/stylesheets/_bootstrap.scss",
+        "assets/fonts/bootstrap/*",
+        "assets/javascripts/bootstrap.js"
+      ]
+    }
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.2.0"
+  }
+}

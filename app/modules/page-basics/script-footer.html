@@ -1,0 +1,34 @@
+<!-- build:js(.) scripts/vendor.js -->
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/modernizr/modernizr.js"></script>
+<script src="/bower_components/bootstrap/js/src/modal.js"></script>
+<script src="/bower_components/rangeslider.js/dist/rangeslider.js"></script>
+<!-- endbuild -->
+
+
+<!-- babel baut die js files ins .build Verzeichnis -->
+<!-- build:js(.build) scripts/main.js -->
+<script> $.ajaxSetup({ cache: true }); </script>
+<script src="scripts/bootstrap_overwrite/tab.js"></script>
+<script src="scripts/media-heandling.js"></script>
+<script src="scripts/accordion.js"></script>
+<!-- endbuild -->
+
+
+<!-- build:js scripts/plugins.js -->
+<script src="/bower_components/bootstrap/js/src/util.js"></script>
+<script src="/bower_components/bootstrap/js/src/alert.js"></script>
+<script src="/bower_components/bootstrap/js/src/dropdown.js"></script>
+<script src="/bower_components/bootstrap/js/src/tooltip.js"></script>
+<script src="/bower_components/bootstrap/js/src/modal.js"></script>
+<script src="/bower_components/bootstrap/js/src/button.js"></script>
+<script src="/bower_components/bootstrap/js/src/popover.js"></script>
+<script src="/bower_components/bootstrap/js/src/carousel.js"></script>
+<script src="/bower_components/bootstrap/js/src/scrollspy.js"></script>
+<script src="/bower_components/bootstrap/js/src/collapse.js"></script>
+<script src="/bower_components/bootstrap/js/src/tab.js"></script>
+<!-- endbuild -->
+
+<!-- build:js scripts/main.js -->
+<script src="scripts/main.js"></script>
+<!-- endbuild -->

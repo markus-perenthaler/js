@@ -1,0 +1,35 @@
+<!doctype html>
+<html class="no-js" lang="de">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>Deutsche Bahn - Generische Seite</title>
+
+  @@include('page-basics/html-head.html')
+
+</head>
+
+<body>
+
+@@include('page-basics/modal.html')
+
+<section class="container-fluid">
+  <div class="row">
+    <main class="col-md-8 clearfix">
+      @@include('editorial-content/headings.html')
+      <hr class="functional-divider-header">
+      @@include('editorial-content/list.html')
+      <hr class="functional-divider-header">
+      @@include('accordion.html')
+      @@include('table.html')
+      <hr class="functional-divider-header">
+      @@include('video/video-full.html')
+      @@include('audio/audio-player.html')
+
+    </main>
+  </div>
+</section>
+
+@@include('page-basics/script-footer.html')
+
+</body>
+</html>

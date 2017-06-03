@@ -1,0 +1,27 @@
+@mixin importFont($fontFamily, $filename, $fontWeight: normal){
+  @font-face {
+    font-family: '#{$fontFamily}';
+    src: url('fonts/#{$filename}.eot'); // IE9 Compat Modes
+    src: url('fonts/#{$filename}.eot?#iefix') format('embedded-opentype'), //IE6-IE8
+    url('fonts/#{$filename}.woff2') format('woff2'), // Super Modern Browsers
+    url('fonts/#{$filename}.woff') format('woff'), // Pretty Modern Browsers
+    url('fonts/#{$filename}.ttf')  format('truetype'), // Safari, Android, iOS
+    url('fonts/#{$filename}.svg#svgFontName') format('svg'); // Legacy iOS
+    font-weight: $fontWeight;
+  }
+}
+
+%icon-settings {
+  font-family: 'icon';
+  //noinspection CssUnknownProperty
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  //noinspection CssUnknownProperty
+  -moz-osx-font-smoothing: grayscale;
+}
